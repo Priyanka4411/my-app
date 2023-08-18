@@ -3,15 +3,15 @@ import './App.css';
 import Text1 from './v6_components/Textform_v7';
 import { useState } from 'react';
 import Alert1 from './v6_components/Alert_v13';
-// import {
-//   BrowserRouter,
-//   Routes,
-//   Route,
+import {
+  BrowserRouter,
+  Routes,
+  Route,
 
 
-// } from "react-router-dom";
+} from "react-router-dom";
 
-// import About1 from './v6_components/About_v10';
+import About1 from './v6_components/About_v10';
 
 function App() {
 
@@ -28,7 +28,7 @@ function App() {
     })
     setTimeout(() => {
       setAlert(null)
-    }, 400)
+    }, 1500)
   }
 
 
@@ -45,9 +45,9 @@ function App() {
       setInterval(() => {
         document.title = "hellooooooo"
       }, 2000)
-      // setTimeout(()=>{
-      //   document.title="insall now"
-      // },2000)
+      setTimeout(()=>{
+        document.title="insall now"
+      },2000)
 
     }
     else {
@@ -81,25 +81,25 @@ function App() {
 
   return (
     <>
-        {/* <BrowserRouter> */}
+        <BrowserRouter>
 <Nav1 titleTxt="TextUtils" aboutTxt="Aboutus" mode={mode} togmode={togmode} togmode2={togmode2} />
 <Alert1 alert={alert} />
        
         <div className="container my-3" mode={mode}>
-          {/* <Routes> */}
-            {/* <Route path="/about" element={<About1 />} /> */}
-          {/* </Routes> */}
-          {/* <Routes> */}
-            {/* <Route */}
-               {/* path="/" */}
-              {/* element={ */}
- <Text1 headingTxt="enter atext,to anlayz" mode={mode} funAlert={funAlert} />
+          <Routes>
+            <Route path="/about" element={<About1  mode={mode}/>} />
+          </Routes>
+          <Routes>
+            <Route
+               path="/" 
+               element={ 
+ <Text1 headingTxt="Try TextUtils - Word Counter , Character Counter , remove extra spaces" mode={mode} funAlert={funAlert} />
                 
-              {/* } */}
-            {/* /> */}
-          {/* </Routes> */}
+               } 
+             /> 
+          </Routes>
         </div>
-      {/* </BrowserRouter> */}
+      </BrowserRouter>
   
     </>
   );
